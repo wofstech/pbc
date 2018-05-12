@@ -1,0 +1,33 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href='{% static "blog/styles.css" %}'>
+
+    
+
+
+<div class='tryit'>
+    <h3><strong>{{ post.title }}</strong></h3>
+    <h4><i>{{ post.time }}</i></h4>
+    <h4><i>Posted by {{ post.author }}</i></h4>
+    <p style="text-align: justify;" >{{ post.body }}</p>
+    <hr style='border-color:#5E4485;'>
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+</div>
+
+
+<div>
+    
+    {% for comments in post.comments.all %}
+            <div class="comment">
+            <strong> Posted by {{ comments.author }}</strong><br>
+            {{ comments.time }}
+            <p>{{ comments.text|linebreaks }}</p>
+            </div>
+            {% empty %}
+            <p class='nocomment'>No comments here yet </p>
+    {% endfor %}
+<div>
+{% endblock %}

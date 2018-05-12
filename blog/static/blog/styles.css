@@ -1,0 +1,216 @@
+body {
+    font-family: 'Ubuntu', serif;
+    font-size: 15px;
+  }
+
+.navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #5E4485;
+    color:#fff;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border:0;
+}
+
+.navbar-brand{
+    float: left;
+    min-height: 55px;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover{
+    color: #fff;
+    background-color: #5E4485;
+}
+
+.navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+}
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cform{
+    width: 50%;
+    margin: auto;
+}
+
+
+
+
+.btn{
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 22px;
+    background-color: #5E4485;
+    border: 2px solid #fff;
+
+}
+
+.btn2{
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 22px;
+    background-color: #5E4485;
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+    border-radius:10px;
+}
+
+.container{
+    margin: 1% auto;
+}
+
+.about{
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.comment {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nocomment{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.comment p{
+    margin-left: 3%;
+}
+
+#recent{
+    margin: 0 0 0 0;
+}
+
+
+#btn1{
+    margin-left: 20px;
+}
+
+#icon{
+    max-width: 200px;
+    margin: 1% auto;
+}
+
+
+footer{
+    width: 100%;
+    background-color: #5E4485;
+    padding: 2%;
+    color: #fff; 
+    margin-top: 20px;  
+}
+.fa{
+    padding: 20px;
+    font-size: 30px;
+    color:#fff;
+}
+
+.fa:hover{
+    color: #000000;
+}
+
+.work{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+
+.work a:hover{
+    text-decoration: none;
+    color: #5E4485;
+}
+
+.myforms{
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+}
+
+.row h4{
+    color: #fff;
+}
+
+.row a:hover{
+    font-size: 20px;
+}
+
+.row a{
+    text-decoration: none;
+}
+
+.myforms h3{
+     text-align: center;
+     color: #5E4485;
+}
+
+.comform{
+    width: 50%;
+    margin-right: 50%;
+    margin-left: 4%;
+}
+
+.tryit{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.work a{
+    color: #5E4485;
+}
+
+.blogpost a:hover{
+    text-decoration: none;
+}
+
+.blogpost a{
+    text-decoration: none;
+    
+}
+
+#myblog {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 200px;
+}
+
+
+
+@media (max-width:600px){
+    .carousel-caption{
+        display:none;
+    }
+
+    #icon{
+        max-width: 150px;
+    }
+
+    .myforms{
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .about{
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .comform{
+        width: 80%;
+        margin:auto;
+    }
+
+    .work{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+    }
+}

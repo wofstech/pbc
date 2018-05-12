@@ -1,0 +1,1 @@
+web: gunicorn pbc.wsgi --log-file -

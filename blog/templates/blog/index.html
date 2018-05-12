@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+{% load static %}
+<link rel='stylesheet' href='{% static "blog/styles.css" %}'>
+
+
+</div>
+<div class='container' >
+    <h1 style="font-family: 'Tangerine', serif; font-size: 60px; color:#5E4485;">Recent Posts</h1>
+    {% for posts in post  %}
+    <div class='container' id='myblog'>
+        <div class='blogpost'>
+            <h3><strong><a href='/post/{{ posts.id }}'>{{ posts.title }}</strong></h3></a>
+            <h4><i>{{ posts.time }}</i></h4>
+            <h4><i>Posted by {{ posts.author }}</i></h4>
+            <p style="text-align: justify;">{{ posts.body }}</p>
+        </div>
+           
+    </div>
+    <a href='/post/{{ posts.id }}'><button type='button' class='btn btn-default' id='btn1'>Continue Reading</button></a>
+    <hr style='border-color:#5E4485;'> 
+    {% endfor %}
+</div>
+<div class='text-center'>
+   <a href="{% url 'posts' %}"> <button type='button' class='btn btn-default'>View Older Posts</button></a>
+</div>
+{% endblock %} 
