@@ -8,7 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 
 def index(request):
-    post = Post.objects.all()[:4]
+    post = Post.objects.all()[:6]
 
     context = {
         'post': post,
