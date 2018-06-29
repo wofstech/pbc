@@ -1,14 +1,16 @@
 from django.shortcuts import render, redirect
-from . models import Post
+from . models import Post, Members
 from django.views import generic
 from blog.forms import  CommentForm, ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+from .forms import MemberForm
+from django.contrib import messages
 
 
 
 def index(request):
-    post = Post.objects.all()[:6]
+    post = Post.objects.all()[:7]
 
     context = {
         'post': post,
@@ -57,3 +59,32 @@ def add_comment_to_post(request, pk):
     else:
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
+    
+list = []
+def register(request):
+    a = Members.objects.all().count() + 1
+    b = 'PBC/M/024/'
+    if a < 10:
+       b = 'PBC/M/024/00' 
+    if a > 9 and a < 100:
+       b = 'PBC/M/024/0'
+    if a > 99:
+       b = 'PBC/M/024/'
+    list.append(a)
+    if request.method == 'POST':
+        member_form = MemberForm(request.POST) 
+        if member_form.is_valid(): 
+                       
+            mem = member_form.save(commit=False)
+            mem.pbc_number = b + str(a)
+            mem.save()
+            return redirect('confirm', a)           
+    
+    else:        
+        member_form = MemberForm()         
+
+    return render(request, 'blog/register.html', {'member_form': member_form, 'a': a, 'b': b})
+
+def confirm(request, pk):
+    reg = Members.objects.get(pk = list[-1])   
+    return render(request, 'blog/confirm.html', {'reg': reg})

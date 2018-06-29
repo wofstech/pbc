@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prophetic Business Council</title>
+    {% load static %}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel='stylesheet' href='{% static "blog/styles.css" %}'>
+
+</head>
+
+<body>
+    
+    <section id='regshow2'><br>
+        <br>
+    <div class='reg'>
+        <h3 style=" font-size: 28px; color:#ffffff; text-align:center"> Registration Complete!</h3>
+        <p style=" font-size: 20px; color:#ffffff; text-align:center">Hello <span style="color:aqua;">{{reg.First_Name}}</span>, You are welcome to PBC</p>
+        <p style=" font-size: 20px; color:#ffffff; text-align:center">Your Unique PBC Serial Number is:</p>
+        <p style=" font-size: 38px; color:aqua; text-align:center">{{reg.pbc_number}}</p>
+        <p style=" font-size: 20px; color:#ffffff; text-align:center">Please Keep This Number for Future Reference</p>
+        <br>
+        <br>
+        <a href='{% url "index" %}' ><p style="font-size: 28px; color:aqua; text-align:center">Click here to visit PBC Home</p></a>
+    
+    </div>
+    <br>
+    <br>
+</section>
+          
+    
+</body>
+
+</html>
+
+

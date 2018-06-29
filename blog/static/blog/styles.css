@@ -1,6 +1,7 @@
 body {
     font-family: 'Ubuntu', serif;
     font-size: 15px;
+    color:#666666
   }
 
 .navbar{
@@ -43,11 +44,13 @@ body {
 .btn{
     font-size: 18px;
     color: #fff;
-    padding: 12px 22px;
+    padding: 6px 12px;
     background-color: rgb(163, 141,28);
     border: 2px solid #fff;
 
 }
+
+
 
 .btn2{
     font-size: 18px;
@@ -57,6 +60,11 @@ body {
     border: 2px solid #fff;
     margin-bottom: 10px;
     border-radius:10px;
+}
+
+.fimage{
+    height: 80px;
+    width: 80px;
 }
 
 .container{
@@ -125,11 +133,12 @@ footer{
     width: 35%;
     margin: auto;
     text-align: center;
+
 }
 
 .work a:hover{
     text-decoration: none;
-    color: rgb(163, 141,28);
+    color: #000000;
 }
 
 .myforms{
@@ -161,11 +170,45 @@ footer{
     margin-left: 4%;
 }
 
-.tryit{
+#regshow{
+    background: 
+      /* top, transparent red */
+      linear-gradient(
+        rgba(73,78,104, 0.35),
+        rgba(73,78,104, 0.35)
+      ),
+      url("/static/blog/pbc99.jpg");
+      color: #ffffff;
+    min-height: 800px;
+    text-align: center;
+}
+
+#regshow2{
+    background: 
+      /* top, transparent red */
+      linear-gradient(
+        rgba(73,78,104, 0.50),
+        rgba(73,78,104, 0.50)
+      ),
+      url("/static/blog/pbc99.jpg");
+      color: #ffffff;
+    min-height: 600px;
+    text-align: center;
+}
+
+.reg{
+    width:50%;
+    margin:auto;
+    text-align: left;
+}
+#tryit{
     margin-left: 10%;
     margin-right: 10%;
 }
 
+.form-text{
+    display: none;
+}
 .work a{
     color: rgb(163, 141,28);
 }
@@ -182,12 +225,12 @@ footer{
 #myblog {
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 200px;
+    height: 198px;
 }
 
 
 
-@media (max-width:600px){
+@media (max-width:1000px){
     .carousel-caption{
         display:none;
     }
@@ -203,7 +246,7 @@ footer{
     }
 
     .about{
-        width: 80%;
+        width: 95%;
         margin: auto;
         padding: 20px;
     }
@@ -217,5 +260,16 @@ footer{
         width: 70%;
         margin: auto;
         text-align: center;
+    }
+
+    .reg{
+        width:70%;
+        margin:auto;
+        text-align: left;
+    }
+
+    .fimage{
+        height: 60px;
+        width: 60px;
     }
 }

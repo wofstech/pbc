@@ -7,13 +7,12 @@
 
 </div>
 <div class='container' >
-    <h1 style="font-family: 'Tangerine', serif; font-size: 60px; color:rgb(163, 141,28);">Recent Posts</h1>
+    <h1 style="font-family: 'Tangerine', serif; font-size: 60px; color:#666666;">Recent Posts</h1>
     {% for posts in post  %}
     <div class='container' id='myblog'>
         <div class='blogpost'>
             <h3><strong><a href='/post/{{ posts.id }}'>{{ posts.title }}</strong></h3></a>
             <h4><i>{{ posts.time }}</i></h4>
-            <h4><i>Posted by {{ posts.author }}</i></h4>
             <p style="text-align: justify;">{{ posts.body }}</p>
         </div>
            

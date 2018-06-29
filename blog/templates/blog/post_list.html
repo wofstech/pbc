@@ -10,7 +10,7 @@
     <strong></strong><h2 style="font-family: 'Tangerine', serif; font-size: 58px; color:#5E4485;">All Posts</h2></strong>
     {% for post in post_list %}
             <div class='blogpost'>
-                <h3><strong><a style="font-family: 'Ubuntu', serif; font-size: 20px;" href="{{ post.get_absolute_url }}">{{ post.title }}</strong></h3></a>
+                <h3><strong><a class='listup' style="font-family: 'Ubuntu', serif; font-size: 20px;" href="{{ post.get_absolute_url }}">{{ post.title }}</strong></h3></a>
                 <h4 style="font-family: 'Ubuntu:italic', serif; font-size: 20px;">{{ post.time }}</h4>
                 <hr style='border-color:#5E4485;'>
             </div>
